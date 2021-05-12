@@ -48,7 +48,7 @@ def getProfile():
         user.liked = True
         db.session.commit()
         return render_template('result.html')
-    except Exception, e:
+    except Exception e: # except Exception, e:
         print("FORM ERROR", str(e))
 
 @app.route('/webview/', methods=['GET'])
